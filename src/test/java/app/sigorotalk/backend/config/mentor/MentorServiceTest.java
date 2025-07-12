@@ -67,7 +67,7 @@ class MentorServiceTest {
         List<Review> reviews = Collections.emptyList();
 
         when(mentorRepository.findByIdWithUser(1L)).thenReturn(Optional.of(testMentor));
-        when(reviewRepository.findByCoffeeChatApplication_Mentor_Id(1L)).thenReturn(reviews);
+        when(reviewRepository.findByCoffeeChatApplicationMentorId(1L)).thenReturn(reviews);
 
         // when
         var result = mentorService.getMentorDetail(1L);

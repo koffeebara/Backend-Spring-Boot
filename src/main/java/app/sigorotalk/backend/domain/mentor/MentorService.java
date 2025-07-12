@@ -33,7 +33,7 @@ public class MentorService {
                 .orElseThrow(() -> new BusinessException(CommonErrorCode.NOT_FOUND));
 
         // 멘토의 리뷰 목록 조회
-        List<Review> reviews = reviewRepository.findByCoffeeChatApplication_Mentor_Id(mentorId);
+        List<Review> reviews = reviewRepository.findByCoffeeChatApplicationMentorId(mentorId);
 
         return MentorDetailResponseDto.from(mentor, reviews);
     }

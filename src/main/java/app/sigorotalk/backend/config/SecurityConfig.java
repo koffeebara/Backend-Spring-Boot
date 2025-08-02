@@ -51,7 +51,7 @@ public class SecurityConfig {
                         .requestMatchers("/actuator/prometheus").permitAll() // 모니터링 로그 수집 엔드포인트 허용!
                         .requestMatchers(SWAGGER_URLS).permitAll()
                         .requestMatchers("/api/auth/**", "/api/users", "/login", "/api/**").permitAll() // 로그인, 회원가입은 허용
-                        .anyRequest().authenticated() // 나머지는 인증 필요
+                       .anyRequest().permitAll()  // 나머지는 인증 필요
                 )
 
                 // JWT 필터 추가

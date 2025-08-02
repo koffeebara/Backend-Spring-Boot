@@ -38,7 +38,7 @@ public class SecurityConfig {
         http
                 // 기본 설정
                 .cors(Customizer.withDefaults())  
-                .csrf(AbstractHttpConfigurer::disable())  
+                .csrf(AbstractHttpConfigurer::disable)  
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .formLogin(AbstractHttpConfigurer::disable)
                 // 세션 STATELESS 설정
